@@ -7,4 +7,8 @@ router.get("/:idEmpresa", (req, res) => {
     empresaController.listarParametro(req, res)
 });
 
+router.get("/listarLimites/:idEmpresa", (req, res) => {
+    empresaController.listarLimites(req, res)
+});
+
 module.exports = router;
