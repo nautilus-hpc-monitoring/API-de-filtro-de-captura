@@ -1,9 +1,9 @@
-var componenteNodeModel = require("../models/componenteNodeModel");
+var empresaModel = require("../models/empresaModel");
 
-async function listarComponentesNode(_req, res) {
+async function listarEmpresa(req, res) {
     try {
-        const response = await componenteNodeModel.listarComponentesNode();
-    
+        const idEmpresa = req.params.idEmpresa;
+        const response = await empresaModel.listarEmpresa(idEmpresa);
         res.status(200).json(response);
     } catch (error) {
         console.log(error)
@@ -16,5 +16,5 @@ async function listarComponentesNode(_req, res) {
 }
 
 module.exports = {
-    listarComponentesNode
+    listarEmpresa
 }
