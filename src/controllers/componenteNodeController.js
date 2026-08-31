@@ -6,6 +6,8 @@ async function listarComponentesNode(_req, res) {
     
         res.status(200).json(response);
     } catch (error) {
+        console.log(error)
+
         res.status(500).json({
             status: 'error',
             message: 'Ocorreu um erro interno'

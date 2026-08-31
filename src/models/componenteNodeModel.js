@@ -5,7 +5,7 @@ function listarComponentesNode() {
         SELECT * FROM componente_node;
     `;
 
-    return database.executar(listarComponentesNode());
+    return database.executar(instrucaoSql);
 }
 
 module.exports = {
