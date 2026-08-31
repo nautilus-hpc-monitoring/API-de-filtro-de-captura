@@ -1,6 +1,6 @@
 var database = require('../database/config');
 
-function listarEmpresa(idEmpresa) {
+function listarParametro(idEmpresa) {
     var instrucaoSql = `
         SELECT DISTINCT c.nome AS componente, c.comando_parametro, c.unidade FROM empresa e 
         JOIN ambiente_hpc a ON a.fk_empresa = e.id
@@ -24,6 +24,6 @@ function listarLimites(idEmpresa) {
 }
 
 module.exports = {
-    listarEmpresa,
+    listarParametro,
     listarLimites
 }

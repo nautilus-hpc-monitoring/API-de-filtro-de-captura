@@ -1,9 +1,9 @@
 var empresaModel = require("../models/empresaModel");
 
-async function listarEmpresa(req, res) {
+async function listarParametro(req, res) {
     try {
         const idEmpresa = req.params.idEmpresa;
-        const response = await empresaModel.listarEmpresa(idEmpresa);
+        const response = await empresaModel.listarParametro(idEmpresa);
         res.status(200).json(response);
     } catch (error) {
         console.log(error)
@@ -31,6 +31,6 @@ async function listarLimites(req, res) {
 }
 
 module.exports = {
-    listarEmpresa,
+    listarParametro,
     listarLimites
 }
