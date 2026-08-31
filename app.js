@@ -15,11 +15,15 @@ var HOST_APP = process.env.APP_HOST;
 
 var app = express();
 
+var componenteNodeRouter = require('./src/routes/componenteNode');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors());
+
+app.use("/componenteNode", componenteNodeRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`http://${HOST_APP}:${PORTA_APP} ${process.env.AMBIENTE_PROCESSO}`)
