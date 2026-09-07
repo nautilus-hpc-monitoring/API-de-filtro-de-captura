@@ -3,8 +3,8 @@ var router = express.Router();
 
 var empresaController = require("../controllers/empresaController")
 
-router.get("/:idEmpresa", (req, res) => {
-    empresaController.listarParametro(req, res)
+router.get("/metricas", (req, res) => {
+    empresaController.buscarMetricasPorToken(req, res)
 });
 
 router.get("/listarLimites/:idEmpresa", (req, res) => {
